@@ -30,7 +30,6 @@ export const HeroSection = () => {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="flex items-center gap-3 mb-6 justify-center lg:justify-start"
             >
-              <div className="text-4xl">{'</>'}</div>
               <div className="flex gap-3">
                 <a
                   href="https://linkedin.com"
@@ -61,7 +60,7 @@ export const HeroSection = () => {
               transition={{ delay: 0.4, duration: 0.8 }}
               className="text-5xl md:text-7xl font-light mb-4 tracking-tight"
             >
-              Sidar Adigüzel
+              Yang (Andrew) Gao
             </motion.h1>
 
             <motion.div
@@ -87,11 +86,10 @@ export const HeroSection = () => {
               transition={{ delay: 0.8, duration: 0.8 }}
               className="text-gray-400 text-lg mb-8 max-w-2xl leading-relaxed"
             >
-              Software engineering student passionate about turning ideas into scalable digital
-              products. Experienced in full-stack development with Flutter, Node.js, and React.
-              Developed mobile apps, browser extensions, Unity games, and published a Dart package
-              on pub.dev. Known for learning fast, collaborating effectively, and simplifying
-              complex concepts through code and education.
+              Full-stack and AI-focused software engineer with hands-on experience across frontend, backend, and AI technologies. I've interned at{' '}
+              <span className="text-accent-cyan font-semibold">MiniMax</span>,{' '}
+              <span className="text-accent-cyan font-semibold">Microsoft</span>, and{' '}
+              <span className="text-accent-cyan font-semibold">DiDi</span>, where I built scalable UI component systems, high-performance SSR applications, and production-grade microservices used by thousands of users. I specialize in solving complex engineering problems—such as multi-agent orchestration, RAG retrieval optimization, and distributed service design—with a strong emphasis on reliability and performance. I'm passionate about delivering clean, maintainable, and high-impact systems.
             </motion.p>
 
             <motion.a

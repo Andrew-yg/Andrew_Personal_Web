@@ -21,7 +21,7 @@ function App() {
             Built with React, TypeScript, Tailwind CSS, and Framer Motion
           </p>
           <p className="text-xs mt-2">
-            2025 Sidar Adigüzel. All rights reserved.
+            2025 Yang (Andrew) Gao. All rights reserved.
           </p>
         </footer>
       </div>
