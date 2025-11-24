@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import profileImage from '../src_pic/Gemini_Generated_Image_5jhmvr5jhmvr5jhm.png';
 
 export const AboutSection = () => {
   const ref = useRef(null);
@@ -31,7 +32,7 @@ export const AboutSection = () => {
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-accent-blue to-accent-cyan rounded-2xl blur-xl opacity-40 group-hover:opacity-70 transition duration-500"></div>
               <img
-                src="https://images.pexels.com/photos/3783725/pexels-photo-3783725.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src={profileImage}
                 alt="About profile"
                 className="relative w-80 h-80 md:w-96 md:h-96 object-cover rounded-2xl shadow-2xl border-2 border-dark-lighter"
               />
@@ -46,28 +47,20 @@ export const AboutSection = () => {
           >
             <div className="space-y-4 text-gray-300 text-lg leading-relaxed">
               <p>
-                Hello! I was born on December 25, 2001, in Kars, Turkey. I graduated from Kars
-                Science High School, where my interest in software development began. I started
-                coding during my high school years, and over time, it turned into a true passion.
+                I'm currently pursuing a Master of Engineering in ECE (Software Engineering) at Duke
+                University, after completing my Computer Science degree at the University of Michigan.
+                I've gained hands-on industry experience through internships at MiniMax, Microsoft, and
+                DiDi, where I worked across full-stack web development, mobile engineering, and
+                large-scale system design.
               </p>
               <p>
-                I'm currently pursuing a Bachelor's degree in Software Engineering (English program)
-                at Istanbul Health and Technology University. During my academic journey, I've been
-                strengthening my theoretical background while developing real-world projects to gain
-                hands-on experience.
+                These roles strengthened my skills in React/Next.js, Node.js, Swift, cloud-native
+                architecture, and high-performance service development. I'm passionate about building
+                scalable, well-designed systems—especially in full-stack engineering, distributed
+                backend services, and AI-powered applications.
               </p>
               <p>
-                I have a strong interest in modern web and mobile technologies. I've developed
-                mobile apps using Flutter, built user interfaces with React, and integrated backend
-                services with Firebase. I also continue to deepen my knowledge in core topics such
-                as algorithms, data structures, and object-oriented programming.
-              </p>
-              <p>
-                I am a fast learner, a good team player, and always open to new technologies.
-                Beyond software development, I'm also passionate about artificial intelligence, game
-                development, and entrepreneurship. In my free time, I explore new tech tools and
-                study open-source projects. My ultimate goal is to create sustainable and creative
-                digital solutions that make people's lives easier.
+                I love turning complex technical ideas into real, user-focused products.
               </p>
             </div>
           </motion.div>

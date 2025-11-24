@@ -32,7 +32,7 @@ export const HeroSection = () => {
             >
               <div className="flex gap-3">
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/andrewyg/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-accent-blue transition-colors duration-300"
@@ -40,7 +40,7 @@ export const HeroSection = () => {
                   <Linkedin size={24} />
                 </a>
                 <a
-                  href="https://github.com"
+                  href="https://github.com/Andrew-yg"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-accent-cyan transition-colors duration-300"
@@ -89,7 +89,7 @@ export const HeroSection = () => {
               Full-stack and AI-focused software engineer with hands-on experience across frontend, backend, and AI technologies. I've interned at{' '}
               <span className="text-accent-cyan font-semibold">MiniMax</span>,{' '}
               <span className="text-accent-cyan font-semibold">Microsoft</span>, and{' '}
-              <span className="text-accent-cyan font-semibold">DiDi</span>, where I built scalable UI component systems, high-performance SSR applications, and production-grade microservices used by thousands of users. I specialize in solving complex engineering problems—such as multi-agent orchestration, RAG retrieval optimization, and distributed service design—with a strong emphasis on reliability and performance. I'm passionate about delivering clean, maintainable, and high-impact systems.
+              <span className="text-accent-cyan font-semibold">DiDi</span>, where I built scalable UI component systems, high-performance SSR applications, and production-grade microservices used by thousands of users. I still focus on learning and solving AI-Agent (LangGraph), RAG retrieval optimization, and distributed service design—with a strong emphasis on reliability and performance. I'm passionate about delivering clean, maintainable, and high-impact systems.
             </motion.p>
 
             <motion.a
@@ -120,7 +120,7 @@ export const HeroSection = () => {
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-accent-blue via-accent-cyan to-accent-purple rounded-3xl blur-lg opacity-50 group-hover:opacity-75 transition duration-500"></div>
               <img
-                src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="src/src_pic/IMG_5493.jpg"
                 alt="Profile"
                 className="relative w-80 h-80 md:w-96 md:h-96 object-cover rounded-3xl shadow-2xl"
               />
