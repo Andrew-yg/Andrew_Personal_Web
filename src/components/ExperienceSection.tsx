@@ -2,38 +2,49 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 
+// Import company logos
+import minimaxLogo from '../src_pic/minimax-color.png';
+import microsoftLogo from '../src_pic/microsoft-logo.svg';
+import didiLogo from '../src_pic/Didi_Chuxing.svg.png';
+
 const experiences = [
   {
-    year: '2025 - Present',
-    title: 'Programming and AI Instructor',
-    company: 'Bilim Güngören',
-    description:
-      'Delivered beginner-friendly programming lessons (variables, loops, conditionals) to middle school students through interactive and engaging sessions. Designed and created custom learning materials and mini-projects to explain core AI principles and real-world applications. Mentored students in hands-on activities to foster critical thinking, creativity, and problem-solving skills.',
-    tags: ['Python', 'Machine Learning', 'Scratch'],
+    year: 'Mar. 2025 – Jun. 2025',
+    title: 'Software Engineer Intern',
+    company: 'MiniMax (Hailuo AI Team) | Beijing, China',
+    logo: minimaxLogo,
+    logoSize: 'w-10 h-10',
+    description: [
+      'Architected a modular drag-and-drop upload system with end-to-end pipeline achieving 99%+ success rate. Resolved async race conditions in concurrent uploads using useRef and UUID-based callback filtering.',
+      'Redesigned HLModal universal component with dual-layer API (declarative Props & AntD proxy with render slots like ReactNode) serving 10+ business modules, reducing development overhead by 30%.',
+      'Engineered H5-to-App deep-linking using custom URL schemes with browser focus detection, driving a 23.3% DNU increase and an 8.5% DAU boost; also architected a layered state management system using Redux for UI state, LocalStorage for session persistence, and Reselect to prevent unnecessary re-renders.',
+    ],
+    tags: ['React', 'Next.js', 'Redux', 'Node.js', 'TypeScript'],
   },
   {
-    year: '2024 - 2025',
-    title: 'Software Engineering Student',
-    company: 'Istanbul Health and Technology University',
-    description:
-      'Pursuing Bachelor\'s degree in Software Engineering (English program). Strengthening theoretical foundations in algorithms, data structures, and object-oriented programming while developing real-world projects. Active participation in coding competitions and hackathons.',
-    tags: ['Java', 'C++', 'Algorithms', 'Data Structures'],
+    year: 'Dec. 2024 – Mar. 2025',
+    title: 'Software Engineer Intern',
+    company: 'Microsoft (MAI Bing Monetization Team) | Beijing, China',
+    logo: microsoftLogo,
+    logoSize: 'w-16 h-16',
+    description: [
+      'Designed multiple SSR applications in a Monorepo using Next.js App Router, reducing code duplication by 30%; established end-to-end type safety with TypeScript & GraphQL, eliminating 90% of potential API interface errors.',
+      'Optimized performance through hybrid rendering (RSC + CSR) and SSR with CDN static asset optimization and WebP processing, achieving Core Web Vitals: LCP 0.83s, INP 30ms, CLS 0.04, sub-100ms TTFB.',
+      'Delivered a stateless authentication microservice (Node.js, Passport.js) implementing OAuth 2.0 with traditional password auth and JWT session management, supporting 10K+ concurrent users with 99.8% uptime.',
+    ],
+    tags: ['React', 'JavaScript', 'GraphQL', 'Node.js'],
   },
   {
-    year: '2023 - 2024',
-    title: 'Full-Stack Developer',
-    company: 'Freelance',
-    description:
-      'Developed mobile applications using Flutter with Firebase backend integration. Built responsive web applications using React and Node.js. Published open-source Dart packages on pub.dev. Created browser extensions and Unity-based games.',
-    tags: ['Flutter', 'React', 'Node.js', 'Firebase', 'Unity'],
-  },
-  {
-    year: '2020 - 2023',
-    title: 'High School Student & Aspiring Developer',
-    company: 'Kars Science High School',
-    description:
-      'Started coding journey during high school years. Participated in various coding workshops and online courses. Built first mobile applications and web projects. Developed strong interest in software development and technology.',
-    tags: ['HTML', 'CSS', 'JavaScript', 'Mobile Apps'],
+    year: 'Jun. 2024 – Sep. 2024',
+    title: 'Software Engineer Intern',
+    company: 'DiDi (E-Hailing Carpool Team) | Beijing, China',
+    logo: didiLogo,
+    logoSize: 'w-16 h-16',
+    description: [
+      'Created 10+ dynamic-rendering UI components using Masonry auto-layout and BIRD architecture, achieving complete UI/logic decoupling through a clear Interactor-Router-Presenter pattern.',
+      'Enhanced performance by offloading image decoding with Core Animation and AsyncDisplayKit; built priority-based async task queues with GCD and NSOperationQueue, reducing image load time by 10%.',
+    ],
+    tags: ['Swift', 'Objective-C', 'Masonry', 'UIKit'],
   },
 ];
 
@@ -59,9 +70,9 @@ export const ExperienceSection = () => {
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
               whileHover={{ scale: 1.02 }}
               className="group relative"
             >
@@ -71,7 +82,10 @@ export const ExperienceSection = () => {
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <div>
                     <h3 className="text-2xl font-semibold text-white mb-1">{exp.title}</h3>
-                    <p className="text-accent-cyan text-lg">{exp.company}</p>
+                    <div className="flex items-center gap-3">
+                      <img src={exp.logo} alt={`${exp.company} logo`} className={`${exp.logoSize} object-contain`} />
+                      <p className="text-accent-cyan text-lg">{exp.company}</p>
+                    </div>
                   </div>
                   <div className="mt-2 md:mt-0">
                     <span className="inline-block px-4 py-2 bg-dark-lighter rounded-full text-sm text-gray-300 border border-accent-blue/30">
@@ -80,7 +94,14 @@ export const ExperienceSection = () => {
                   </div>
                 </div>
 
-                <p className="text-gray-300 leading-relaxed mb-4">{exp.description}</p>
+                <div className="text-gray-300 leading-relaxed mb-4 space-y-2">
+                  {exp.description.map((item, i) => (
+                    <p key={i} className="flex items-start">
+                      <span className="mr-2 mt-1.5 w-1.5 h-1.5 bg-accent-cyan rounded-full flex-shrink-0"></span>
+                      <span>{item}</span>
+                    </p>
+                  ))}
+                </div>
 
                 <div className="flex flex-wrap gap-2">
                   {exp.tags.map((tag, tagIndex) => (

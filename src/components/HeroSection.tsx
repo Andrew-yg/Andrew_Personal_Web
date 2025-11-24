@@ -89,7 +89,7 @@ export const HeroSection = () => {
               Full-stack and AI-focused software engineer with hands-on experience across frontend, backend, and AI technologies. I've interned at{' '}
               <span className="text-accent-cyan font-semibold">MiniMax</span>,{' '}
               <span className="text-accent-cyan font-semibold">Microsoft</span>, and{' '}
-              <span className="text-accent-cyan font-semibold">DiDi</span>, where I built scalable UI component systems, high-performance SSR applications, and production-grade microservices used by thousands of users. I still focus on learning and solving AI-Agent (LangGraph), RAG retrieval optimization, and distributed service design—with a strong emphasis on reliability and performance. I'm passionate about delivering clean, maintainable, and high-impact systems.
+              <span className="text-accent-cyan font-semibold">DiDi</span>, where I built scalable UI component systems, high-performance SSR applications, and microservices used by thousands of users. I still focus on learning and solving AI-Agent (LangGraph) problems, RAG retrieval optimization, and distributed service design—with a strong emphasis on reliability and performance. I'm passionate about delivering clean, maintainable, and high-impact systems.
             </motion.p>
 
             <motion.a

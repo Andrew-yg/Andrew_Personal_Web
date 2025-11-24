@@ -1,7 +1,9 @@
 import { HeroSection } from './components/HeroSection';
 import { AboutSection } from './components/AboutSection';
 import { TechnologySection } from './components/TechnologySection';
+import { ProjectSection } from './components/ProjectSection';
 import { ExperienceSection } from './components/ExperienceSection';
+import { ContactSection } from './components/ContactSection';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <AboutSection />
         <TechnologySection />
         <ExperienceSection />
+        <ProjectSection />
+        <ContactSection />
 
         <footer className="py-8 text-center text-gray-400 border-t border-dark-lighter">
           <p className="text-sm">
