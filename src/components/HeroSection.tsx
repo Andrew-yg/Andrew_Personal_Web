@@ -49,7 +49,7 @@ export const HeroSection = () => {
                 </a>
                 <div className="text-gray-400 flex items-center gap-1">
                   <Eye size={20} />
-                  <span className="text-sm">1.8K</span>
+                  <span className="text-sm">0.2K</span>
                 </div>
               </div>
             </motion.div>
