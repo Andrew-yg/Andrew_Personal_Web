@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { Download, Linkedin, Github, Eye } from 'lucide-react';
 import { useTypewriter } from '../hooks/useTypewriter';
-import profileImg from '../src_pic/Andrew .jpg';
+import profileImg from '../src_pic/Andrew.jpg';
 
 const WORDS = ['Full-Stack Web Developer', 'AI Software Engineer'];
 
