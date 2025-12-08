@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { Download, Linkedin, Github, Eye } from 'lucide-react';
 import { useTypewriter } from '../hooks/useTypewriter';
+import profileImg from '../src_pic/Andrew .jpg';
 
 const WORDS = ['Full-Stack Web Developer', 'AI Software Engineer'];
 
@@ -122,7 +123,7 @@ export const HeroSection = () => {
             <div className="relative group">
               <div className="absolute -inset-1 bg-gradient-to-r from-accent-blue via-accent-cyan to-accent-purple rounded-3xl blur-lg opacity-50 group-hover:opacity-75 transition duration-500"></div>
               <img
-                src="src/src_pic/Andrew .jpg"
+                src={profileImg}
                 alt="Profile"
                 className="relative w-80 h-80 md:w-96 md:h-96 object-cover rounded-3xl shadow-2xl"
               />
