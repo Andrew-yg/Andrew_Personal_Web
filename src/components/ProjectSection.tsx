@@ -3,35 +3,37 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Github, ExternalLink } from 'lucide-react';
 
+import aiStudyAssistantImg from '../src_pic/AI_STUDY_ASSISTANT.png';
+
 // Placeholder data based on the screenshot style
 const projects = [
     {
-        title: 'ResearchX',
+        title: 'AI_Study_Assistant',
         description: 'AI-powered research document generator that creates comprehensive research papers using advanced AI models. Features include citation management and export options.',
-        tags: ['TS', 'Next.js', 'AI'],
-        image: 'bg-gradient-to-br from-yellow-400/20 to-orange-500/20', // Placeholder gradient
+        tags: ['Vue', 'Nuxt.js', 'RAG', 'FastAPI', 'Cloudflare', 'MongoDB', 'LangChain'],
+        image: aiStudyAssistantImg,
         liveUrl: '#',
-        githubUrl: '#',
+        githubUrl: 'https://github.com/Andrew-yg/AI-Study-Assistant',
     },
     {
-        title: 'Freshmart Store',
-        description: 'Modern grocery store web application with a clean and responsive UI. Built with efficient state management using Redux, featuring cart functionality and user auth.',
-        tags: ['React', 'Redux', 'Tailwind'],
+        title: 'Agent_to_Job',
+        description: 'Job application assistant that helps users find and apply for jobs using advanced AI models via Agents.',
+        tags: ['Agent', 'LangGraph', 'LangChain', 'FastAPI'],
         image: 'bg-gradient-to-br from-green-400/20 to-emerald-500/20',
         liveUrl: '#',
         githubUrl: '#',
     },
     {
-        title: 'Nike Reimagined',
-        description: 'A sleek and modern Nike website redesign showcasing fully responsive design with smooth animations and clean UI inspired by the latest design trends.',
+        title: 'Coming Soon',
+        description: 'Coming Soon',
         tags: ['React', 'Tailwind', 'Framer'],
         image: 'bg-gradient-to-br from-gray-400/20 to-gray-500/20',
         liveUrl: '#',
         githubUrl: '#',
     },
     {
-        title: 'News Hub',
-        description: 'Real time news application integrating News API to deliver headlines across various categories. Features a modern interface with category filtering and search.',
+        title: 'Coming Soon',
+        description: 'Coming Soon',
         tags: ['TS', 'React', 'API'],
         image: 'bg-gradient-to-br from-blue-400/20 to-indigo-500/20',
         liveUrl: '#',
@@ -65,23 +67,36 @@ export const ProjectSection = () => {
                             animate={isInView ? { opacity: 1, x: 0 } : {}}
                             transition={{ duration: 0.8, delay: index * 0.2 }}
                             whileHover={{ y: -10 }}
-                            className="group relative bg-dark-card border border-dark-lighter rounded-2xl overflow-hidden hover:border-accent-cyan/50 transition-all duration-300 shadow-xl"
+                            className="group relative bg-dark-card border border-dark-lighter rounded-2xl overflow-hidden hover:border-accent-cyan/50 transition-all duration-300 shadow-xl flex flex-col h-full"
                         >
-                            {/* Project Image Placeholder */}
-                            <div className={`h-48 ${project.image} relative overflow-hidden group-hover:scale-105 transition-transform duration-500`}>
-                                <div className="absolute inset-0 flex items-center justify-center text-gray-500/30 text-6xl font-bold">
-                                    {project.title[0]}
-                                </div>
+                            {/* Project Image */}
+                            <div className="h-48 relative overflow-hidden group-hover:scale-105 transition-transform duration-500 flex-shrink-0">
+                                {project.image.startsWith('bg-') ? (
+                                    <div className={`absolute inset-0 ${project.image} flex items-center justify-center`}>
+                                        <div className="text-gray-500/30 text-6xl font-bold">
+                                            {project.title[0]}
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <img
+                                        src={project.image}
+                                        alt={project.title}
+                                        className="w-full h-full object-cover"
+                                    />
+                                )}
                             </div>
 
-                            <div className="p-6">
-                                <div className="flex justify-between items-start mb-4">
+                            <div className="p-6 flex flex-col flex-1">
+                                <div className="flex flex-col gap-3 mb-4">
                                     <h3 className="text-2xl font-semibold text-white group-hover:text-accent-cyan transition-colors">
                                         {project.title}
                                     </h3>
-                                    <div className="flex gap-2">
+                                    <div className="flex flex-wrap gap-2">
                                         {project.tags.map((tag, i) => (
-                                            <span key={i} className="text-xs font-mono px-2 py-1 rounded bg-dark-lighter text-accent-blue border border-dark-lighter">
+                                            <span
+                                                key={i}
+                                                className="text-xs font-medium px-3 py-1 rounded-full bg-accent-blue/10 text-accent-blue border border-accent-blue/20 hover:bg-accent-blue/20 hover:border-accent-blue/50 hover:scale-105 hover:shadow-lg hover:shadow-accent-blue/20 transition-all duration-300 cursor-default"
+                                            >
                                                 {tag}
                                             </span>
                                         ))}
@@ -92,10 +107,18 @@ export const ProjectSection = () => {
                                     {project.description}
                                 </p>
 
-                                <div className="flex gap-6">
+                                <div className="flex gap-6 mt-auto">
                                     <a
                                         href={project.liveUrl}
-                                        className="flex items-center gap-2 text-sm text-accent-cyan hover:text-accent-blue transition-colors"
+                                        onClick={(e) => {
+                                            if (project.liveUrl === '#') {
+                                                e.preventDefault();
+                                            }
+                                        }}
+                                        className={`flex items-center gap-2 text-sm transition-colors ${project.liveUrl === '#'
+                                                ? 'text-gray-500 cursor-not-allowed hover:text-gray-500'
+                                                : 'text-accent-cyan hover:text-accent-blue'
+                                            }`}
                                     >
                                         <ExternalLink size={16} />
                                         Live Demo

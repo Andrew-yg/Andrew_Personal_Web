@@ -2,9 +2,11 @@ import { motion } from 'framer-motion';
 import { Download, Linkedin, Github, Eye } from 'lucide-react';
 import { useTypewriter } from '../hooks/useTypewriter';
 
+const WORDS = ['Full-Stack Web Developer', 'AI Software Engineer'];
+
 export const HeroSection = () => {
   const { text, cursor } = useTypewriter({
-    words: ['Full-Stack Web Developer', 'AI Software Engineer'],
+    words: WORDS,
     typeSpeed: 100,
     deleteSpeed: 50,
     delayBetweenWords: 2000,
@@ -105,7 +107,7 @@ export const HeroSection = () => {
               <span className="font-medium">CV</span>
               <Download
                 size={20}
-                className="group-hover:translate-y-1 transition-transform duration-300"
+                className="transition-transform duration-300"
               />
             </motion.a>
           </motion.div>
