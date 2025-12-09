@@ -4,6 +4,7 @@ import { useRef } from 'react';
 import { Github, ExternalLink } from 'lucide-react';
 
 import aiStudyAssistantImg from '../src_pic/AI_STUDY_ASSISTANT.png';
+import agentJobSearchImg from '../src_pic/Agent_JobSearch.png';
 
 // Placeholder data based on the screenshot style
 const projects = [
@@ -16,12 +17,12 @@ const projects = [
         githubUrl: 'https://github.com/Andrew-yg/AI-Study-Assistant',
     },
     {
-        title: 'Agent_to_Job',
-        description: 'Job application assistant that helps users find and apply for jobs using advanced AI models via Agents.',
-        tags: ['Agent', 'LangGraph', 'LangChain', 'FastAPI'],
-        image: 'bg-gradient-to-br from-green-400/20 to-emerald-500/20',
+        title: 'Agent_JobSearch',
+        description: 'AI-powered job search assistant that automatically finds, analyzes, and recommends top job opportunities from LinkedIn tailored to your profile and preferences.',
+        tags: ['Agent', 'LangGraph', 'LangChain', 'FastAPI', 'React', 'TypeScript'],
+        image: agentJobSearchImg,
         liveUrl: '#',
-        githubUrl: '#',
+        githubUrl: 'https://github.com/Andrew-yg/Agent_JobSearch',
     },
     {
         title: 'Coming Soon',
@@ -67,7 +68,7 @@ export const ProjectSection = () => {
                             animate={isInView ? { opacity: 1, x: 0 } : {}}
                             transition={{ duration: 0.8, delay: index * 0.2 }}
                             whileHover={{ y: -10 }}
-                            className="group relative bg-dark-card border border-dark-lighter rounded-2xl overflow-hidden hover:border-accent-cyan/50 transition-all duration-300 shadow-xl flex flex-col h-full"
+                            className="group relative liquid-glass-box overflow-hidden hover:border-accent-cyan/50 transition-all duration-300 shadow-xl flex flex-col h-full"
                         >
                             {/* Project Image */}
                             <div className="h-48 relative overflow-hidden group-hover:scale-105 transition-transform duration-500 flex-shrink-0">
@@ -95,7 +96,7 @@ export const ProjectSection = () => {
                                         {project.tags.map((tag, i) => (
                                             <span
                                                 key={i}
-                                                className="text-xs font-medium px-3 py-1 rounded-full bg-accent-blue/10 text-accent-blue border border-accent-blue/20 hover:bg-accent-blue/20 hover:border-accent-blue/50 hover:scale-105 hover:shadow-lg hover:shadow-accent-blue/20 transition-all duration-300 cursor-default"
+                                                className="text-xs font-medium px-3 py-1 liquid-glass-rounded text-accent-blue hover:scale-105 hover:shadow-lg hover:shadow-accent-blue/20 transition-all duration-300 cursor-default"
                                             >
                                                 {tag}
                                             </span>
@@ -116,8 +117,8 @@ export const ProjectSection = () => {
                                             }
                                         }}
                                         className={`flex items-center gap-2 text-sm transition-colors ${project.liveUrl === '#'
-                                                ? 'text-gray-500 cursor-not-allowed hover:text-gray-500'
-                                                : 'text-accent-cyan hover:text-accent-blue'
+                                            ? 'text-gray-500 cursor-not-allowed hover:text-gray-500'
+                                            : 'text-accent-cyan hover:text-accent-blue'
                                             }`}
                                     >
                                         <ExternalLink size={16} />

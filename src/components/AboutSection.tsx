@@ -34,7 +34,7 @@ export const AboutSection = () => {
               <img
                 src={profileImage}
                 alt="About profile"
-                className="relative w-80 h-80 md:w-96 md:h-96 object-cover rounded-2xl shadow-2xl border-2 border-dark-lighter"
+                className="relative w-80 h-80 md:w-96 md:h-96 object-cover liquid-glass-box"
               />
             </div>
           </motion.div>

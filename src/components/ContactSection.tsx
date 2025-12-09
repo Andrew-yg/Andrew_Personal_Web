@@ -23,14 +23,14 @@ export const ContactSection = () => {
                     </h2>
 
                     <p className="text-xl text-gray-300 mb-12 leading-relaxed">
-                        I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
+                        I'm always open to Internship &Jobs opportunities.
                     </p>
 
                     <motion.a
                         href="mailto:andrewyg1101@gmail.com"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-accent-blue to-accent-cyan text-dark font-bold rounded-full text-lg shadow-lg hover:shadow-accent-cyan/50 transition-all duration-300"
+                        className="inline-flex items-center gap-3 px-8 py-4 liquid-glass-rounded text-white hover:bg-white/10 transition-all duration-300"
                     >
                         <Mail className="w-6 h-6" />
                         <span>andrewyg1101@gmail.com</span>

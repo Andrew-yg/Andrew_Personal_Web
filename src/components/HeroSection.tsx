@@ -103,7 +103,7 @@ export const HeroSection = () => {
               transition={{ delay: 1, duration: 0.6 }}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="inline-flex items-center gap-2 px-8 py-4 bg-transparent border-2 border-accent-cyan text-accent-cyan rounded-full hover:bg-accent-cyan hover:text-white transition-all duration-300 group"
+              className="inline-flex items-center gap-2 px-8 py-4 liquid-glass-rounded text-accent-cyan hover:bg-accent-cyan/10 transition-all duration-300 group"
             >
               <span className="font-medium">CV</span>
               <Download

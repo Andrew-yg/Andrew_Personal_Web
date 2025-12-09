@@ -78,7 +78,7 @@ export const ExperienceSection = () => {
             >
               <div className="absolute -inset-1 bg-gradient-to-r from-accent-blue via-accent-cyan to-accent-purple rounded-2xl blur-lg opacity-0 group-hover:opacity-30 transition-opacity duration-500"></div>
 
-              <div className="relative bg-dark-card border border-dark-lighter rounded-2xl p-6 md:p-8 hover:border-accent-cyan/50 transition-all duration-300">
+              <div className="relative liquid-glass-box p-6 md:p-8 hover:border-accent-cyan/50 transition-all duration-300">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                   <div>
                     <h3 className="text-2xl font-semibold text-white mb-1">{exp.title}</h3>
@@ -107,7 +107,7 @@ export const ExperienceSection = () => {
                   {exp.tags.map((tag, tagIndex) => (
                     <span
                       key={tagIndex}
-                      className="px-3 py-1 bg-accent-blue/10 text-accent-cyan text-sm rounded-full border border-accent-cyan/30 hover:bg-accent-cyan/20 transition-colors duration-300"
+                      className="px-3 py-1 liquid-glass-rounded text-accent-cyan text-sm hover:bg-accent-cyan/20 transition-colors duration-300"
                     >
                       {tag}
                     </span>
