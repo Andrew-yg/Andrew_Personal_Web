@@ -16,10 +16,10 @@ const experiences = [
     logoSize: 'w-10 h-10',
     description: [
       'Architected a modular drag-and-drop upload system with end-to-end pipeline achieving 99%+ success rate. Resolved async race conditions in concurrent uploads using useRef and UUID-based callback filtering.',
-      'Redesigned HLModal universal component with dual-layer API (declarative Props & AntD proxy with render slots like ReactNode) serving 10+ business modules, reducing development overhead by 30%.',
+      'Redesigned dual-layer JWT authentication system protecting 20+ RESTful endpoints:  real-time database session validation via PostgreSQL user lookup, preventing token reuse from deleted accounts.',
       'Engineered H5-to-App deep-linking using custom URL schemes with browser focus detection, driving a 23.3% DNU increase and an 8.5% DAU boost; also architected a layered state management system using Redux for UI state, LocalStorage for session persistence, and Reselect to prevent unnecessary re-renders.',
     ],
-    tags: ['React', 'Next.js', 'Redux', 'Node.js', 'TypeScript'],
+    tags: ['React', 'Next.js', 'Redux', 'Node.js', 'TypeScript', 'PostgreSQL'],
   },
   {
     year: 'Dec. 2024 – Mar. 2025',
@@ -28,11 +28,11 @@ const experiences = [
     logo: microsoftLogo,
     logoSize: 'w-16 h-16',
     description: [
-      'Designed multiple SSR applications in a Monorepo using Next.js App Router, reducing code duplication by 30%; established end-to-end type safety with TypeScript & GraphQL, eliminating 90% of potential API interface errors.',
+      'Delivered SSR platforms using React Router and GraphQL Monorepo, integrating a type-safe schema with TypeScript and replacing three cascading REST endpoints with one nested GraphQL query, reducing fetch latency by 64%.',
       'Optimized performance through hybrid rendering (RSC + CSR) and SSR with CDN static asset optimization and WebP processing, achieving Core Web Vitals: LCP 0.83s, INP 30ms, CLS 0.04, sub-100ms TTFB.',
-      'Delivered a stateless authentication microservice (Node.js, Passport.js) implementing OAuth 2.0 with traditional password auth and JWT session management, supporting 10K+ concurrent users with 99.8% uptime.',
+      'Delivered 6 MongoDB schemas with 3-level nested documents and 12+ compound indexes, reducing query latency by 30% and achieving 100+ concurrent operations via atomic updates (findOneAndUpdate) across Node.js API microservices',
     ],
-    tags: ['React', 'JavaScript', 'GraphQL', 'Node.js'],
+    tags: ['React', 'JavaScript', 'GraphQL', 'Node.js', 'TypeScript', 'MongoDB'],
   },
   {
     year: 'Jun. 2024 – Sep. 2024',

@@ -11,7 +11,7 @@ const projects = [
     {
         title: 'AI_Study_Assistant',
         description: 'AI-powered research document generator that creates comprehensive research papers using advanced AI models. Features include citation management and export options.',
-        tags: ['Vue', 'Nuxt.js', 'RAG', 'FastAPI', 'Cloudflare', 'MongoDB', 'LangChain', 'GraphQL', 'Kubernetes'],
+        tags: ['Vue', 'Nuxt.js', 'RAG', 'FastAPI', 'Cloudflare', 'MongoDB', 'LlamaIndex', 'GraphQL', 'Kubernetes', 'Docker'],
         image: aiStudyAssistantImg,
         liveUrl: '#',
         githubUrl: 'https://github.com/Andrew-yg/AI-Study-Assistant',
@@ -19,7 +19,7 @@ const projects = [
     {
         title: 'Agent_JobSearch',
         description: 'AI-powered job search assistant that automatically finds, analyzes, and recommends top job opportunities from LinkedIn tailored to your profile and preferences.',
-        tags: ['ReAct', 'LangGraph', 'LangChain', 'FastAPI', 'Next.js', 'ChromaDB', 'RAG'],
+        tags: ['ReAct', 'LangGraph', 'LangChain', 'FastAPI', 'Next.js', 'ChromaDB', 'RAG', 'SQLite'],
         image: agentJobSearchImg,
         liveUrl: '#',
         githubUrl: 'https://github.com/Andrew-yg/Agent_JobSearch',
